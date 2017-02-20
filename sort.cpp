@@ -23,6 +23,13 @@ for (int location=0; location<data.size();location++)
 		min = j; //update min index
 	}
 	swap(data[location], data[min]);
+	int count ++;
+	int pass += count;
+	if (count == 20000)
+	{	
+		cout<<endl<<"The number of passes is: "<<pass<<endl;
+	}
+	
 }
 }
 
