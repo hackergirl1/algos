@@ -14,7 +14,7 @@ using namespace std;
 */
 
 void selectionSort(auto & data){
-int count, pass;
+int count=0, pass=0;
 
 for (int location=0; location<data.size();location++)
 {
@@ -25,9 +25,10 @@ for (int location=0; location<data.size();location++)
 		min = j; //update min index
 	}
 	swap(data[location], data[min]);
+	
 	count ++;
-	pass += count;
-	if (count == 20000)
+	pass ++;
+	if (count == 20000) // or if( count % 20000 == 0) 
 	{	
 		count = 0;
 		cout<<endl<<"The number of passes is: "<<pass<<endl;
